@@ -19,15 +19,28 @@
   
 }
 .menu ul form input {
+    background: rgb(10,143,112);
+    background: linear-gradient(255deg, rgba(10,143,112,1) 0%, rgba(118,229,203,1) 100%);
     border-radius: 10px 0 10px 0;
-    padding-top:10px;
+    padding-top:33px;
+    text-align: center;
+    vertical-align: middle;
+    
+}
+.menu ul form input::placeholder{
+    color:black;
+    font-weight: bold;
+    text-align: center;
+    vertical-align: middle;
+    
 }
 .menu ul form button {
     border-radius:0 10px 0 10px;
     text-align: center;
     padding-left: 10px;
     padding-right: 10px;
-    padding-top:10px;
+    padding-top:16px;
+    padding-bottom: 18px;
   }
 .menu > ul {
     display: flex;
