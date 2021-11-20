@@ -21,7 +21,10 @@
 }
 .menu > ul >li {
     position: relative;
+    display: flex;
     align-items: center;
+
+    height: 60px;
 }
 .menu > ul >li >a {
     display: block;
@@ -32,6 +35,7 @@
     padding: 0 15px;
     color: #333;
     border-radius: 43px;
+    
 }
 .menu >ul >li:hover >a{
     height: 40px;
@@ -39,33 +43,45 @@
 } 
 .menu ul .dropdown {
     position: absolute;
-    
+    padding-left: 20px;
     top:50px;
     left: 50%;
     width: 200px;
-    padding-top: 10px;
+    padding-top: 20px;
+    margin-left: -100px;
+    text-align: center;
     display: none;
+   
 }
 .menu ul .dropdown::before {
     content: '';
     border: 8px solid transparent;
-    border-bottom-color: red ;
+    border-bottom-color: #D0D2D2 ;
     position: absolute;
-    top:-10px;
-    left :0;
+    top:0px;
+    left :50%;
+    margin-left: -16px;
+    
 
 }
+.menu ul .dropdown .dropdown ::before{
+    border-bottom-color: transparent;
+    border-right-color: red;
+    top: 0;
+    left: 0 ;
+}
 .menu  ul .dropdown .dropdown {
-    left: 210px;
+    left: 290px;
     top:0;
-    display: block;
+    display: none;
+    padding-bottom: 10px;
+    padding-left: 20px;
 }
-.menu ul .dropdown li:hover {
-    display: block;
-}
+
 .menu ul .dropdown li {
     position: relative;
 }
+
 .menu ul ul {
     
     background: #f5f5f5;
@@ -90,5 +106,11 @@
     color:#000;
 }
 .menu > ul > li:hover > a + .dropdown {
+    display: block;
+}
+.menu ul .dropdown li:hover {
+    display: block;
+}
+.menu ul .dropdown li:hover >a +.dropdown {
     display: block;
 }
